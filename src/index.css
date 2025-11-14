@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* SEUM Maroon Brand Palette (HSL values for Tailwind) */
+    --color-primary: 326 36% 22%; /* #4B233A */
+    --color-primary-dark: 330 38% 16%; /* #3A1A2A */
+    --color-primary-light: 328 31% 33%; /* #6D3A55 */
+    --color-primary-hover: 329 35% 28%; /* #602E48 */
+
+    --color-accent: 322 20% 81%; /* #D9C6D2 */
+    --color-accent-bright: 320 27% 89%; /* #EBDCE6 */
+
+    --color-bg: 240 14% 97%; /* #F7F7F9 */
+    --color-surface: 0 0% 100%; /* #FFFFFF */
+    --color-border: 228 10% 90%; /* #E4E5E9 */
+
+    --color-text-main: 240 3% 11%; /* #1C1C1E */
+    --color-text-muted: 240 2% 43%; /* #6B6B6F */
+    --color-text-light: 0 0% 97%; /* #F7F7F7 */
+
+    /* Design tokens backed by palette */
+    --background: var(--color-bg);
+    --foreground: var(--color-text-main);
+
+    --card: var(--color-surface);
+    --card-foreground: var(--color-text-main);
+
+    --popover: var(--color-surface);
+    --popover-foreground: var(--color-text-main);
+
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-text-light);
+
+    --secondary: var(--color-primary-light);
+    --secondary-foreground: var(--color-text-main);
+
+    --muted: var(--color-bg);
+    --muted-foreground: var(--color-text-muted);
+
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-primary);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: var(--color-border);
+    --input: var(--color-border);
+    --ring: var(--color-primary);
+
+    --radius: 0.75rem;
+    
+    /* Custom SEUM tokens */
+    --gray-soft: var(--color-accent);
+    --gray-accent: var(--color-accent-bright);
+    --gray-light: var(--color-bg);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: var(--color-primary-dark);
+    --foreground: var(--color-text-light);
+
+    --card: var(--color-primary-light);
+    --card-foreground: var(--color-text-light);
+
+    --popover: var(--color-primary-light);
+    --popover-foreground: var(--color-text-light);
+
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-text-light);
+
+    --secondary: var(--color-primary-dark);
+    --secondary-foreground: var(--color-text-light);
+
+    --muted: var(--color-accent);
+    --muted-foreground: var(--color-text-light);
+
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-primary-dark);
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: var(--color-border);
+    --input: var(--color-border);
+    --ring: var(--color-primary);
+
+    --sidebar-background: var(--color-primary-dark);
+    --sidebar-foreground: var(--color-text-light);
+    --sidebar-primary: var(--color-primary);
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: var(--color-primary-light);
+    --sidebar-accent-foreground: var(--color-text-light);
+    --sidebar-border: var(--color-border);
+    --sidebar-ring: var(--color-primary);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Arabic font */
+  [lang="ar"],
+  [dir="rtl"] {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+  }
+
+  /* Hero background with city image */
+  .hero-section {
+    background:
+      linear-gradient(135deg, rgba(58, 26, 42, 0.92), rgba(75, 35, 58, 0.92)),
+      url('/images/hero-seum-city.jpg') center/cover no-repeat;
+  }
+
+  .hero-title-shadow {
+    text-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* Smooth animations */
+@layer utilities {
+  .seum-card {
+    border-radius: 16px;
+    border: 1px solid hsl(var(--color-border));
+    background-color: hsl(var(--color-surface));
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease,
+      background-color 0.25s ease;
+  }
+
+  @media (hover: hover) {
+    .seum-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      border-color: hsl(var(--color-primary));
+      background-color: #3A1A2A;
+    }
+  }
+
+  .seum-card-animate {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .seum-card-in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.7s ease-out;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.7s ease-out;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.7s ease-out;
+  }
+
+  /* Hero staged fade-in-up */
+  .hero-fade-up {
+    opacity: 0;
+    animation: heroFadeUp 0.6s ease-out forwards;
+  }
+
+  /* Scroll-in animation for cards and logos */
+  .scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .scroll-fade-in-visible {
+    animation: scrollFadeInUp 0.6s ease-out forwards;
+  }
+
+  /* Interactive card hover */
+  .card-interactive {
+    transition:
+      transform 0.18s ease-out,
+      box-shadow 0.18s ease-out,
+      border-color 0.18s ease-out,
+      background-color 0.18s ease-out;
+  }
+
+  .card-interactive:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+    border-color: hsl(var(--color-primary));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
