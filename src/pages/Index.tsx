@@ -11,6 +11,7 @@ import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { WhyChooseUsSection } from '@/components/WhyChooseUsSection';
+import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 
 const Index = () => {
   return (
@@ -29,6 +30,7 @@ const Index = () => {
         <Footer />
       </div>
       <ScrollToTop />
+      <FloatingWhatsApp />
     </LanguageProvider>
   );
 };

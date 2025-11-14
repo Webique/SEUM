@@ -20,11 +20,36 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const to = 'info@seum.com.sa';
+
+    const subject = `SEUM website enquiry - ${formData.name || ''}${
+      formData.company ? ` (${formData.company})` : ''
+    }`;
+
+    const bodyLines = [
+      'Details from SEUM website contact form:',
+      '',
+      `Name: ${formData.name}`,
+      `Company: ${formData.company || '-'}`,
+      `Email: ${formData.email}`,
+      '',
+      'Message:',
+      formData.message,
+    ];
+
+    const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+
+    // Open default email client
+    window.location.href = mailtoUrl;
+
     toast({
-      title: "Message Sent",
-      description: "Thank you for contacting us. We'll get back to you soon.",
+      title: 'Email prepared',
+      description:
+        "Your email app has been opened with the message details. Please review and click send.",
     });
-    setFormData({ name: '', company: '', email: '', message: '' });
   };
 
   const { ref, isVisible } = useInViewAnimation();
@@ -43,26 +68,29 @@ export const ContactSection = () => {
             {t('contact.text')}
           </p>
 
-          <div className="inline-flex items-center space-x-3 rtl:space-x-reverse text-foreground font-semibold text-xl">
+          {/* <div className="inline-flex items-center space-x-3 rtl:space-x-reverse text-foreground font-semibold text-xl">
             <Phone className="w-6 h-6 text-primary" />
-            <a 
-              href="tel:+966530889481" 
+            <a
+              href="tel:+966530889481"
               className="hover:text-primary transition-colors"
             >
               {t('contact.phone')}
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Form + Map */}
         <div
           ref={ref as React.Ref<HTMLDivElement>}
-          className={`grid lg:grid-cols-2 gap-10 scroll-fade-in ${
+          className={`grid lg:grid-cols-2 gap-10 scroll-fade-in  ${
             isVisible ? 'scroll-fade-in-visible' : ''
           }`}
         >
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-6 bg-stone-300 border  border-border/70 rounded-3xl p-6 sm:p-8 shadow-xl backdrop-blur-md "
+          >
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
@@ -74,7 +102,7 @@ export const ContactSection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="bg-background border-border"
+                  className="bg-background border-border focus-visible:ring-2 focus-visible:ring-primary/60"
                 />
               </div>
 
@@ -87,7 +115,7 @@ export const ContactSection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, company: e.target.value })
                   }
-                  className="bg-background border-border"
+                  className="bg-background border-border focus-visible:ring-2 focus-visible:ring-primary/60"
                 />
               </div>
             </div>
@@ -103,7 +131,7 @@ export const ContactSection = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="bg-background border-border"
+                className="bg-background border-border focus-visible:ring-2 focus-visible:ring-primary/60"
               />
             </div>
 
@@ -118,7 +146,7 @@ export const ContactSection = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                className="bg-background border-border resize-none"
+                className="bg-background border-border resize-none focus-visible:ring-2 focus-visible:ring-primary/60"
               />
             </div>
 
@@ -130,6 +158,7 @@ export const ContactSection = () => {
               {t('contact.send')}
               <Send className="ml-2 rtl:mr-2 rtl:ml-0 w-5 h-5 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
             </Button>
+
           </form>
 
           {/* Google Map */}

@@ -5,7 +5,7 @@ import {
 } from "@/components/lightswind/sliding-logo-marquee";
 
 export const ClientsSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   // Actual client list with logos & names
   const items: SlidingLogoMarqueeItem[] = [
@@ -98,22 +98,27 @@ export const ClientsSection = () => {
           </p>
         </div>
 
-        <SlidingLogoMarquee
-          items={items}
-          height="200px"
-          pauseOnHover={true}
-          enableBlur={false}
-          showGridBackground={false}
-          width="75%"
-          gap="1rem"
-          scale={1}
-          direction="horizontal"
-          autoPlay={true}
-          backgroundColor="transparent"
-          enableSpillEffect={false}
-          animationSteps={8}
-          showControls={false}
-        />
+        {/* Force slider to LTR so it looks the same in EN/AR */}
+        <div className="flex justify-center" dir="ltr">
+          <SlidingLogoMarquee
+            items={items}
+            height="200px"
+            pauseOnHover={true}
+            enableBlur={false}
+            showGridBackground={false}
+            width="100%"
+            gap="1.5rem"
+            scale={1}
+            direction="horizontal"
+            autoPlay={true}
+            backgroundColor="transparent"
+            enableSpillEffect={false}
+            // smaller steps -> faster animation
+            animationSteps={8}
+            speed={15}
+            showControls={false}
+          />
+        </div>
       </div>
     </section>
   );

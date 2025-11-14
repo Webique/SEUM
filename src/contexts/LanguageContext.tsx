@@ -115,7 +115,6 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.email': 'Email',
     'contact.message': 'Message',
     'contact.send': 'Send Message',
-    'contact.phone': '+966 53 088 9481',
 
     // Footer
     'footer.quickLinks': 'Quick Links',
@@ -222,7 +221,6 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.email': 'البريد الإلكتروني',
     'contact.message': 'الرسالة',
     'contact.send': 'إرسال الرسالة',
-    'contact.phone': '+966 53 088 9481',
 
     // Why Choose Us
     'why.title': 'لماذا تختارنا؟',

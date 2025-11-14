@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import seumLogo from '@/assets/seum-logo.jpg';
-import { ShieldCheck, BadgeCheck, Target, MapPin, Phone, Clock } from 'lucide-react';
+import { ShieldCheck, BadgeCheck, Target, MapPin, Phone, Clock,Mail   } from 'lucide-react';
 
 export const Footer = () => {
   const { language, t } = useLanguage();
@@ -94,8 +94,13 @@ export const Footer = () => {
               />
               <FooterContactItem
                 icon={Phone}
-                text={t('contact.phone')}
-                href="tel:+966530889481"
+                text="+966 53 088 9481"
+                href="https://wa.me/966530889481"
+              />
+              <FooterContactItem
+                icon={Mail}
+                text="info@seum.com.sa"
+                href="mailto:info@seum.com.sa"
               />
               <FooterContactItem
                 icon={Clock}
@@ -146,14 +151,14 @@ const FooterContactItem = ({ icon: Icon, text, href }: ContactItemProps) => {
       <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/10 border border-white/10">
         <Icon className="w-4 h-4 text-white/80" />
       </div>
-      <span className="text-sm text-[hsl(var(--color-text-light))]/80">{text}</span>
+      <span className="text-sm text-[hsl(var(--color-text-light))]/80" dir="ltr">{text}</span>
     </div>
   );
 
   if (href) {
     return (
       <li>
-        <a href={href} className="hover:opacity-100 hover:underline transition-opacity">
+        <a href={href} className="hover:opacity-100 hover:underline transition-opacity" >
           {content}
         </a>
       </li>
