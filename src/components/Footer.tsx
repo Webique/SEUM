@@ -33,13 +33,6 @@ export const Footer = () => {
                 alt="SEUM"
                 className="h-12  object-cover"
               />
-              <div className="flex flex-col">
-                <span className="text-sm font-semibold tracking-wide uppercase opacity-90">
-                  {language === 'ar'
-                    ? 'سيوم – للاستشارات القانونية'
-                    : 'SEUM – For Legal Consultation'}
-                </span>
-              </div>
             </div>
 
             <p className="text-sm leading-relaxed text-[hsl(var(--color-text-light))]/80 rtl:text-right">

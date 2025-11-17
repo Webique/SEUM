@@ -130,20 +130,6 @@ const ValueItem = ({ value, index }: { value: ValueItemProps; index: number }) =
           >
             {value.title}
           </h3>
-
-          <span
-            className="
-              text-[0.65rem] sm:text-xs font-semibold tracking-[0.18em] uppercase
-              px-2 py-1 rounded-full
-              bg-[hsl(var(--color-accent-bright))]
-              text-[hsl(var(--color-primary-dark))]
-              transition-colors duration-300
-              group-hover:bg-white group-active:bg-white
-              group-hover:text-[hsl(var(--color-primary))] group-active:text-[hsl(var(--color-primary))]
-            "
-          >
-            0{index + 1}
-          </span>
         </div>
 
         <p

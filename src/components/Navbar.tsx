@@ -39,14 +39,13 @@ export const Navbar = () => {
 
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'auto' });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
 
     setIsMobileMenuOpen(false);
   };
 
   const navLinks = [
-    { key: 'about', label: t('nav.about') },
     { key: 'values', label: t('nav.values') },
     { key: 'services', label: t('nav.services') },
     { key: 'clients', label: t('nav.clients') },

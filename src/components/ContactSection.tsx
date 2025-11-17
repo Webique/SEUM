@@ -169,8 +169,9 @@ export const ContactSection = () => {
               height="100%"
               loading="lazy"
               style={{ border: 0 }}
+              allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.365011002113!2d46.675296!3d24.713552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzQ4LjgiTiA0NsKwNDAnMzAuOCJF!5e0!3m2!1sen!2ssa!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3620.073934527076!2d46.64523696899414!3d24.861324310302734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee57a5cbf8e53%3A0x88cc649afcbc3e8a!2zVGhhYmV0IGludmVzdG1lbnQg2KvYp9io2Kog2YTZhNil2LPYqtir2YXYp9ix!5e0!3m2!1sen!2suk!4v1763397005251!5m2!1sen!2suk"
             ></iframe>
           </div>
         </div>

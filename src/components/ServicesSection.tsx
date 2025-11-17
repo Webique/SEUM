@@ -1,13 +1,11 @@
 // src/sections/ServicesSection.tsx  (or wherever it is)
 import { useLanguage } from "@/contexts/LanguageContext";
-import ThreeDCarousel, {
-  ThreeDCarouselItem,
-} from "@/components/lightswind/ThreeDCarousel";
+import { Card, CardContent } from "@/components/ui/card";
 
 export const ServicesSection = () => {
   const { t, language } = useLanguage();
 
-  const items: ThreeDCarouselItem[] = [
+  const services = [
     {
       id: 1,
       title: t("service1.title"),
@@ -17,8 +15,7 @@ export const ServicesSection = () => {
         language === "ar"
           ? ["التقاضي", "النزاعات", "الرسوم المحددة"]
           : ["Litigation", "Disputes", "Capped fees"],
-      imageUrl: "/images/LitigationandDisputeManagement.webp", // put any hero-like image
-      link: "#contact",
+      imageUrl: "/images/LitigationandDisputeManagement.webp",
     },
     {
       id: 2,
@@ -30,7 +27,6 @@ export const ServicesSection = () => {
           ? ["الامتثال", "اللوائح", "تقليل المخاطر"]
           : ["Compliance", "Regulations", "Risk"],
       imageUrl: "/images/compliance.webp",
-      link: "#contact",
     },
     {
       id: 3,
@@ -42,7 +38,6 @@ export const ServicesSection = () => {
           ? ["الشركات", "العقود", "إعادة الهيكلة"]
           : ["Corporate", "Contracts", "Restructuring"],
       imageUrl: "/images/corporateContract.webp",
-      link: "#contact",
     },
     {
       id: 4,
@@ -54,7 +49,6 @@ export const ServicesSection = () => {
           ? ["العمل", "التوظيف", "الاتفاقيات"]
           : ["Employment", "Workplace", "Agreements"],
       imageUrl: "/images/EmploymentLegalConsultancy.webp",
-      link: "#contact",
     },
   ];
 
@@ -72,7 +66,49 @@ export const ServicesSection = () => {
           </p>
         </div>
 
-        <ThreeDCarousel items={items} cardHeight={440} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {services.map((service) => (
+            <Card
+              key={service.id}
+              className="overflow-hidden bg-card/95 border border-white/10 shadow-sm hover:shadow-lg flex flex-col rounded-3xl"
+            >
+              {/* Top image */}
+              <div
+                className="relative h-48 overflow-hidden"
+                style={{
+                  backgroundImage: `url(${service.imageUrl})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold mb-2 text-foreground">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm font-medium mb-3">
+                  {service.brand}
+                </p>
+                <p className="text-muted-foreground text-sm flex-grow mb-4">
+                  {service.description}
+                </p>
+
+                <div className="mt-auto">
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-1 bg-muted text-muted-foreground rounded-full text-xs"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

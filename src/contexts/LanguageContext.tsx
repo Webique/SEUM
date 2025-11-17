@@ -15,23 +15,23 @@ const translations: Record<Language, Record<string, string>> = {
     // Navbar
     'nav.about': 'About',
     'nav.values': 'Our Values',
-    'nav.services': 'Services',
-    'nav.clients': 'Clients',
+    'nav.services': 'Our Services',
+    'nav.clients': 'Our Clients',
     'nav.contact': 'Contact',
     'nav.cta': 'Contact Us',
 
     // Hero
     'hero.label': 'Saudi Law Firm',
-    'hero.title': 'Your Legal Partner for Growth in Saudi Arabia',
+    'hero.title': 'Your Legal Partner For Growth in Saudi Arabia',
     'hero.subtitle':
-      'SEUM is a Saudi law firm providing clear, practical legal advice for businesses. Our Saudi lawyers combine strong regulatory knowledge with local insight to help companies grow and stay compliant in the Kingdom.',
+      'CEO legal advisory, Family Offices Governance, Board Governance',
     'hero.cta1': 'Speak to a Lawyer',
     'hero.cta2': 'View Our Services',
 
     // About
     'about.title': 'About Us',
     'about.text':
-      'SEUM is a Saudi law firm providing clear, practical legal advice for businesses. Our Saudi lawyers combine strong regulatory knowledge with local insight to help companies grow and stay compliant in the Kingdom.',
+      'CEO legal advisory, Family Offices Governance, Board Governance',
 
     // Vision & Mission
     'about.vision.title': 'Vision',
@@ -103,7 +103,7 @@ const translations: Record<Language, Record<string, string>> = {
     'why.subtitle':
     'We are committed to providing clear, practical legal support that helps your business grow while staying fully compliant in Saudi Arabia.',
     'why.point1': 'Saudi-qualified lawyers with deep regulatory experience.',
-    'why.point2': 'Business-focused, practical advice — not legal jargon.',
+    'why.point2': 'Practical business-focused advice that helps you manage your operations with ease and clarity.',
     'why.point3': 'Flexible engagement: ongoing counsel or specialist support.',
 
     // Contact
@@ -122,14 +122,14 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.badge.certified': 'Certified',
     'footer.badge.specialized': 'Specialized',
     'footer.location': 'Saudi Arabia',
-    'footer.hours': 'Available 24/7',
+    'footer.hours': 'Working Hours: Sunday to Thursday, 7 AM to 4 PM',
     'footer.rights': '© SEUM, All rights reserved.',
   },
   ar: {
     // Navbar
     'nav.about': 'من نحن',
     'nav.values': 'قيمنا',
-    'nav.services': 'الخدمات',
+    'nav.services': 'خدماتنا',
     'nav.clients': 'عملاؤنا',
     'nav.contact': 'تواصل',
     'nav.cta': 'تواصل معنا',
@@ -138,14 +138,14 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.label': 'شركة محاماة سعودية',
     'hero.title': 'شريكك القانوني للنمو في السعودية',
     'hero.subtitle':
-      'SEUM شركة محاماة سعودية تقدم استشارات قانونية واضحة وعملية للأعمال. يجمع فريقنا بين المعرفة التنظيمية العميقة وفهم السياق المحلي لمساعدة الشركات على النمو والالتزام بالأنظمة في المملكة.',
+      'الاستشارات القانونية للمدراء التنفيذيين، حوكمة المكاتب العائلية، حوكمة مجالس الإدارة',
     'hero.cta1': 'تحدث إلى محامٍ',
     'hero.cta2': 'استعرض خدماتنا',
 
     // About
     'about.title': 'من نحن',
     'about.text':
-      'SEUM شركة محاماة سعودية تقدم استشارات قانونية واضحة وعملية للأعمال. يجمع فريقنا بين المعرفة التنظيمية العميقة وفهم السياق المحلي لمساعدة الشركات على النمو والالتزام بالأنظمة في المملكة.',
+      'الاستشارات القانونية للمدراء التنفيذيين، حوكمة المكاتب العائلية، حوكمة مجالس الإدارة',
 
     // Vision & Mission
     'about.vision.title': 'الرؤية',
@@ -227,7 +227,7 @@ const translations: Record<Language, Record<string, string>> = {
     'why.subtitle':
       'نلتزم بتقديم دعم قانوني واضح وعملي يساعد أعمالك على النمو مع الالتزام الكامل بأنظمة المملكة العربية السعودية.',
     'why.point1': 'محامون سعوديون مؤهلون بخبرة تنظيمية عميقة.',
-    'why.point2': 'استشارات عملية تركز على الأعمال بعيداً عن التعقيد القانوني.',
+    'why.point2': 'استشارات عملية تساعدك على إدارة أعمالك بسهولة ووضوح.',
     'why.point3': 'مرونة في أسلوب العمل: مستشار قانوني مستمر أو دعم متخصص عند الحاجة.',
 
     // Footer
@@ -236,7 +236,7 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.badge.certified': 'معتمد',
     'footer.badge.specialized': 'متخصص',
     'footer.location': 'المملكة العربية السعودية',
-    'footer.hours': 'متاحون على مدار الساعة',
+    'footer.hours': 'أوقات العمل: الأحد إلى الخميس من 7 ص إلى 4 م',
     'footer.rights': '© SEUM، جميع الحقوق محفوظة.',
   },
 };

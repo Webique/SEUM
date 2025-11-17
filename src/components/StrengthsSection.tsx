@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Target, Users, Handshake } from 'lucide-react';
+import { Brain, Settings, Handshake } from 'lucide-react';
 import { useInViewAnimation } from '@/hooks/useInViewAnimation';
 
 export const StrengthsSection = () => {
@@ -8,12 +8,12 @@ export const StrengthsSection = () => {
 
   const strengths = [
     {
-      icon: Target,
+      icon: Brain,
       title: t('strength1.title'),
       text: t('strength1.text'),
     },
     {
-      icon: Users,
+      icon: Settings,
       title: t('strength2.title'),
       text: t('strength2.text'),
     },
@@ -44,7 +44,7 @@ export const StrengthsSection = () => {
 };
 
 interface Strength {
-  icon: typeof Target;
+  icon: typeof Brain;
   title: string;
   text: string;
 }
@@ -65,13 +65,14 @@ const StrengthCard = ({ strength, index }: { strength: Strength; index: number }
         active:bg-[hsl(var(--color-primary))] active:border-[hsl(var(--color-primary))] active:shadow-md
       "
     >
-      <CardHeader>
+      <CardHeader className="text-center">
         <div
           className="
             mb-4 inline-flex p-3 rounded-xl
             bg-[hsl(var(--color-primary-light))]
             transition-colors duration-300
             group-hover:bg-white/15 group-active:bg-white/20
+            mx-auto
           "
         >
           <strength.icon
@@ -87,6 +88,7 @@ const StrengthCard = ({ strength, index }: { strength: Strength; index: number }
             text-xl font-semibold text-card-foreground
             transition-colors duration-300
             group-hover:text-white group-active:text-white
+            text-center
           "
         >
           {strength.title}
@@ -99,6 +101,7 @@ const StrengthCard = ({ strength, index }: { strength: Strength; index: number }
             text-muted-foreground leading-relaxed
             transition-colors duration-300
             group-hover:text-white/80 group-active:text-white/80
+            text-center
           "
         >
           {strength.text}
