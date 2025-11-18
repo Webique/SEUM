@@ -25,12 +25,12 @@ export const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    // Preload both logos so swap is instant
-    const logoDark = new Image();
-    logoDark.src = '/images/logo-3.png';
-
-    const logoLight = new Image();
-    logoLight.src = '/images/logo-white3.png';
+    // Preload logos so swap is instant
+    const logos = ['/images/logo-3.png', '/images/logo-white3.png', '/images/logoAR.png'];
+    logos.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
   }, []);
 
 
@@ -44,6 +44,8 @@ export const Navbar = () => {
 
     setIsMobileMenuOpen(false);
   };
+
+  const logoSrc = language === 'ar' ? '/images/logoAR.png' : '/images/logo-3.png';
 
   const navLinks = [
     { key: 'values', label: t('nav.values') },
@@ -66,7 +68,7 @@ export const Navbar = () => {
               <img
                 width={200}
                 height={200}
-                src="/images/logo-3.png"
+                src={logoSrc}
                 alt="SEUM"
                 className={`h-12 object-cover ${isScrolled ? '' : 'brightness-0 invert'}`}
               />
