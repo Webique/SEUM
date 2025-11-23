@@ -15,7 +15,7 @@ export const ServicesSection = () => {
         language === "ar"
           ? ["التقاضي", "النزاعات", "الرسوم المحددة"]
           : ["Litigation", "Disputes", "Capped fees"],
-      imageUrl: "/images/LitigationandDisputeManagement.webp",
+      imageUrl: "/images/1.jpg",
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ export const ServicesSection = () => {
         language === "ar"
           ? ["الامتثال", "اللوائح", "تقليل المخاطر"]
           : ["Compliance", "Regulations", "Risk"],
-      imageUrl: "/images/compliance.webp",
+      imageUrl: "/images/2.jpg",
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ export const ServicesSection = () => {
         language === "ar"
           ? ["الشركات", "العقود", "إعادة الهيكلة"]
           : ["Corporate", "Contracts", "Restructuring"],
-      imageUrl: "/images/corporateContract.webp",
+      imageUrl: "/images/3.jpg",
     },
     {
       id: 4,
@@ -48,7 +48,7 @@ export const ServicesSection = () => {
         language === "ar"
           ? ["العمل", "التوظيف", "الاتفاقيات"]
           : ["Employment", "Workplace", "Agreements"],
-      imageUrl: "/images/EmploymentLegalConsultancy.webp",
+      imageUrl: "/images/4.jpg",
     },
   ];
 
