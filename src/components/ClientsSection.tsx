@@ -84,51 +84,6 @@ export const ClientsSection = () => {
         </div>
       ),
     },
-    {
-      id: "jaecoo",
-      content: (
-        <div className="flex flex-col items-center justify-center px-6 py-4 rounded-2xl bg-card border border-white/10 shadow-sm">
-          <img
-            src="/images/5.jpg"
-            alt="Jaecoo"
-            className="h-14 w-auto object-contain mb-3"
-          />
-          <p className="text-sm font-medium text-muted-foreground text-center">
-            Jaecoo
-          </p>
-        </div>
-      ),
-    },
-    {
-      id: "veda-holding",
-      content: (
-        <div className="flex flex-col items-center justify-center px-6 py-4 rounded-2xl bg-card border border-white/10 shadow-sm">
-          <img
-            src="/images/6.jpg"
-            alt="Veda Holding"
-            className="h-14 w-auto object-contain mb-3"
-          />
-          <p className="text-sm font-medium text-muted-foreground text-center">
-            Veda Holding
-          </p>
-        </div>
-      ),
-    },
-    {
-      id: "omoda",
-      content: (
-        <div className="flex flex-col items-center justify-center px-6 py-4 rounded-2xl bg-card border border-white/10 shadow-sm">
-          <img
-            src="/images/7.jpg"
-            alt="Omoda"
-            className="h-14 w-auto object-contain mb-3"
-          />
-          <p className="text-sm font-medium text-muted-foreground text-center">
-            Omoda
-          </p>
-        </div>
-      ),
-    },
   ];
 
   return (
