@@ -89,7 +89,7 @@ export const ClientsSection = () => {
       content: (
         <div className="flex flex-col items-center justify-center px-6 py-4 rounded-2xl bg-card border border-white/10 shadow-sm">
           <img
-            src="/images/jaecoo.PNG"
+            src="/images/5.jpg"
             alt="Jaecoo"
             className="h-14 w-auto object-contain mb-3"
           />
@@ -104,7 +104,7 @@ export const ClientsSection = () => {
       content: (
         <div className="flex flex-col items-center justify-center px-6 py-4 rounded-2xl bg-card border border-white/10 shadow-sm">
           <img
-            src="/images/veda-estate-veda-holdings-logo-png_seeklogo-405469.png"
+            src="/images/6.jpg"
             alt="Veda Holding"
             className="h-14 w-auto object-contain mb-3"
           />
@@ -119,7 +119,7 @@ export const ClientsSection = () => {
       content: (
         <div className="flex flex-col items-center justify-center px-6 py-4 rounded-2xl bg-card border border-white/10 shadow-sm">
           <img
-            src="/images/omoda.png"
+            src="/images/7.jpg"
             alt="Omoda"
             className="h-14 w-auto object-contain mb-3"
           />
