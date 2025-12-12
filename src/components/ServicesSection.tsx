@@ -9,7 +9,7 @@ export const ServicesSection = () => {
     {
       id: 1,
       title: t("service1.title"),
-      brand: "omoda",
+      brand: "SEUM",
       description: t("service1.text"),
       tags:
         language === "ar"
@@ -20,7 +20,7 @@ export const ServicesSection = () => {
     {
       id: 2,
       title: t("service2.title"),
-      brand: "jaecoo",
+      brand: "SEUM",
       description: t("service2.text"),
       tags:
         language === "ar"
