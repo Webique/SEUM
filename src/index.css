@@ -9,10 +9,11 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* New Color Palette (HSL values for Tailwind) */
-    --color-primary: 325 47% 21%; /* #4e1c3b */
-    --color-primary-dark: 210 30% 18%; /* #202e3b */
-    --color-primary-light: 210 24% 24%; /* #2e3e4b */
-    --color-primary-hover: 210 27% 21%; /* darker shade of #2e3e4b */
+    --color-primary: 210 24% 24%; /* #2e3e4b - main blue-gray */
+    --color-primary-dark: 210 30% 18%; /* #202e3b - dark blue-gray */
+    --color-primary-light: 210 20% 30%; /* lighter blue-gray */
+    --color-primary-hover: 210 27% 21%; /* hover state */
+    --color-purple-accent: 325 47% 21%; /* #4e1c3b - purple used very sparingly */
 
     --color-accent: 210 8% 61%; /* #929ca4 */
     --color-accent-bright: 210 12% 75%; /* lighter shade of #929ca4 */
@@ -45,14 +46,14 @@ All colors MUST be HSL.
     --muted-foreground: var(--color-text-muted);
 
     --accent: var(--color-accent);
-    --accent-foreground: var(--color-primary);
+    --accent-foreground: var(--color-primary-dark);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: var(--color-border);
     --input: var(--color-border);
-    --ring: var(--color-primary);
+    --ring: var(--color-purple-accent); /* purple only for focus rings */
 
     --radius: 0.75rem;
     
@@ -98,7 +99,7 @@ All colors MUST be HSL.
 
     --border: var(--color-accent);
     --input: var(--color-accent);
-    --ring: var(--color-primary);
+    --ring: var(--color-purple-accent); /* purple only for focus rings */
 
     --sidebar-background: var(--color-primary-dark);
     --sidebar-foreground: var(--color-text-light);
@@ -134,7 +135,7 @@ All colors MUST be HSL.
   /* Hero background with city image */
   .hero-section {
     background:
-      linear-gradient(135deg, rgba(32, 46, 59, 0.92), rgba(78, 28, 59, 0.92)),
+      linear-gradient(135deg, rgba(32, 46, 59, 0.92), rgba(46, 62, 75, 0.92)),
       url('/images/hero-seum-city.jpg') center/cover no-repeat;
   }
 
