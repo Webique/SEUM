@@ -26,7 +26,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     // Preload logos so swap is instant
-    const logos = ['/images/logo-3.png', '/images/logo-white3.png', '/images/logoAR.png'];
+    const logos = ['/images/logoo.png', '/images/logoAR.png'];
     logos.forEach((src) => {
       const img = new Image();
       img.src = src;
@@ -45,7 +45,7 @@ export const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const logoSrc = language === 'ar' ? '/images/logoAR.png' : '/images/logo-3.png';
+  const logoSrc = language === 'ar' ? '/images/logoAR.png' : '/images/logoo.png';
 
   const navLinks = [
     { key: 'values', label: t('nav.values') },
