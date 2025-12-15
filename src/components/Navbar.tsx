@@ -70,7 +70,7 @@ export const Navbar = () => {
                 height={200}
                 src={logoSrc}
                 alt="SEUM"
-                className={`h-12 object-cover ${isScrolled ? '' : 'brightness-0 invert'}`}
+                className={`h-10 w-auto object-contain ${isScrolled ? '' : 'brightness-0 invert'}`}
               />
             </a>
           </div>
