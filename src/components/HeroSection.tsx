@@ -12,6 +12,15 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center pt-20 overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/hero-bg.png')" }}
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/70" />
+
       {/* Content */}
       <div className="relative z-10 w-full max-w-5xl px-4 sm:px-8">
         {/* Label */}
