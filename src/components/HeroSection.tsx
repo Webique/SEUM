@@ -15,7 +15,7 @@ export const HeroSection = () => {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero-bg.png')" }}
+        style={{ backgroundImage: "url('/images/hero-bg.png')", filter: 'none' }}
       />
 
       {/* Overlay */}
