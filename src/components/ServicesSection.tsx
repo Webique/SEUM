@@ -9,7 +9,7 @@ export const ServicesSection = () => {
     {
       id: 1,
       title: t("service1.title"),
-      brand: "SEUM",
+      brand: language === "ar" ? "سيوم" : "SEUM",
       description: t("service1.text"),
       tags:
         language === "ar"
@@ -20,7 +20,7 @@ export const ServicesSection = () => {
     {
       id: 2,
       title: t("service2.title"),
-      brand: "SEUM",
+      brand: language === "ar" ? "سيوم" : "SEUM",
       description: t("service2.text"),
       tags:
         language === "ar"
@@ -31,7 +31,7 @@ export const ServicesSection = () => {
     {
       id: 3,
       title: t("service3.title"),
-      brand: "SEUM",
+      brand: language === "ar" ? "سيوم" : "SEUM",
       description: t("service3.text"),
       tags:
         language === "ar"
@@ -42,7 +42,7 @@ export const ServicesSection = () => {
     {
       id: 4,
       title: t("service4.title"),
-      brand: "SEUM",
+      brand: language === "ar" ? "سيوم" : "SEUM",
       description: t("service4.text"),
       tags:
         language === "ar"
